@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarifs - B.C.A.O Automobile Services</title>
+
+  <meta name="description" content="Tarifs des services automobiles à domicile : vidange, diagnostic, batterie, lavage, dépannage rapide.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: url("image/fond-site.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #f5a623;
+    }
+
+    .tarifs-container {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .tarif {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .tarif:hover {
+      transform: translateY(-5px);
+    }
+
+    .tarif h2 {
+      color: #f5a623;
+      margin-bottom: 10px;
+    }
+
+    .tarif ul {
+      padding-left: 20px;
+    }
+
+    .tarif ul li {
+      margin-bottom: 6px;
+    }
+
+    .prix {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 15px 0;
+      color: #00ffcc;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background: #25D366;
+      color: #000;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #1ebc59;
+    }
+
+    .urgence {
+      margin-top: 50px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .urgence h2 {
+      color: #ff4d4d;
+    }
+
+    .calculateur {
+      margin-top: 50px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255,255,255,0.1);
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      background: #f5a623;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #e09b1d;
+    }
+
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #fff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+<div class="overlay">
+
+  <h1>Nos Tarifs & Services</h1>
+
+  <div class="tarifs-container">
+
+    <div class="tarif">
+      <h2>Vidange</h2>
+      <ul>
+        <li>Remplacement huile moteur</li>
+        <li>Contrôle général</li>
+      </ul>
+      <p class="prix">15 000 FCFA</p>
+      <a href="https://wa.me/+226 53108001?text=Bonjour,%20je%20souhaite%20une%20vidange" class="btn" target="_blank">
+        Contacter
+      </a>
+    </div>
+    <div class="tarif" id="filtres">
+      <h2>Vidange + Changement de filtres</h2>
+      <p>Vidange moteur + remplacement filtres air, huile et carburant.</p>
+      <p class="prix">25 000 FCFA</p>
+      <span class="badge">Le plus populaire</span>
+      <a href="https://wa.me/+226 53108001?text=Bonjour,%20je%20souhaite%20une%20vidange%20+%20filtres" class="btn" target="_blank">Contacter</a>
+    </div>
+    <div class="tarif" id="plaquettes">
+      <h2>Changement de plaquettes</h2>
+      <p>Remplacement complet des plaquettes de frein avant et arrière.</p>
+      <p class="prix">20 000 FCFA</p>
+      <a href="https://wa.me/+226 53108001?text=Bonjour,%20je%20souhaite%20changer%20les%20plaquettes" class="btn" target="_blank">Contacter</a>
+    </div>
+    <div class="tarif">
+      <h2>Diagnostic automobile</h2>
+      <ul>
+        <li>Lecture des codes défauts</li>
+        <li>Analyse électronique</li>
+      </ul>
+      <p class="prix">10 000 FCFA</p>
+      <a href="https://wa.me/+226 53108001?text=Bonjour,%20je%20souhaite%20un%20diagnostic" class="btn" target="_blank">
+        Contacter
+      </a>
+    </div>
+    <div class="tarif" id="batterie">
+      <h2>Recharge & contrôle de batterie</h2>
+      <p>Test complet de la batterie, recharge sur place ou remplacement si nécessaire.</p>
+      <p class="prix">7 000 FCFA</p>
+      <a href="https://wa.me/+226 53108001?text=Bonjour,%20je%20souhaite%20contrôler%20ma%20batterie" class="btn" target="_blank">Contacter</a>
+    </div>
+    <div class="tarif">
+      <h2>Recharge & contrôle batterie</h2>
+      <ul>
+        <li>Test batterie</li>
+        <li>Recharge sur place</li>
+      </ul>
+      <p class="prix">7 000 FCFA</p>
+      <a href="https://wa.me/+226 53108001?text=Bonjour,%20je%20souhaite%20un%20contrôle%20de%20batterie" class="btn" target="_blank">
+        Contacter
+      </a>
+    </div>
+
+    <div class="tarif">
+      <h2>Lavage express</h2>
+      <ul>
+        <li>Lavage extérieur</li>
+        <li>Nettoyage intérieur</li>
+      </ul>
+      <p class="prix">5 000 FCFA</p>
+      <a href="https://wa.me/+226 53108001?text=Bonjour,%20je%20souhaite%20un%20lavage%20auto" class="btn" target="_blank">
+        Contacter
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Packs -->
+  <div class="urgence">
+    <h2>Packs d’entretien</h2>
+
+    <div class="tarifs-container">
+      <div class="tarif">
+        <h2>Pack basique</h2>
+        <ul>
+          <li>Vidange</li>
+          <li>Diagnostic rapide</li>
+        </ul>
+        <p class="prix">30 000 FCFA</p>
+      </div>
+
+      <div class="tarif">
+        <h2>Pack complet</h2>
+        <ul>
+          <li>Vidange complète</li>
+          <li>Diagnostic</li>
+          <li>Lavage express</li>
+        </ul>
+        <p class="prix">45 000 FCFA</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Urgence -->
+  <div class="urgence">
+    <h2>Intervention urgence / nuit</h2>
+    <p class="prix">Majoration : +5 000 à 10 000 FCFA</p>
+  </div>
+
+  <!-- Calculateur -->
+  <div class="calculateur">
+    <h2>Estimation rapide</h2>
+    <select id="service">
+      <option value="0">Choisir un service</option>
+      <option value="15000">Vidange</option>
+      <option value="10000">Diagnostic</option>
+      <option value="7000">Batterie</option>
+      <option value="5000">Lavage</option>
+    </select>
+    <button onclick="calculer()">Calculer</button>
+    <p id="resultat" class="prix"></p>
+  </div>
+
+  <a href="index.html" class="back-btn">← Retour à l’accueil</a>
+
+</div>
+
+<script>
+function calculer() {
+  let prix = document.getElementById("service").value;
+  let resultat = document.getElementById("resultat");
+
+  if (prix == 0) {
+    resultat.innerHTML = "Veuillez choisir un service";
+  } else {
+    resultat.innerHTML = "Prix estimé : " + prix + " FCFA";
+  }
+}
+</script>
+
+</body>
+</html>
