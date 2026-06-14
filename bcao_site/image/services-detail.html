@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Services Détaillés - B.C.A.O Automobile</title>
+  <style>
+    /* Fond général avec overlay */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('URL_DE_TON_IMAGE_DE_FOND') center/cover no-repeat fixed;
+      color: #fff;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5); /* overlay sombre */
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: #ffcc00;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    section.service {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: rgba(0,0,0,0.5);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+      flex-wrap: wrap;
+    }
+
+    section.service.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section.service img {
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 10px;
+      flex: 1 1 300px;
+    }
+
+    section.service .text {
+      flex: 2 1 500px;
+      margin: 10px;
+    }
+
+    section.service h2 {
+      color: #ffcc00;
+      margin-bottom: 15px;
+    }
+
+    section.service p {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    a.back-btn {
+      display: inline-block;
+      margin: 40px auto;
+      padding: 15px 30px;
+      background-color: #ffcc00;
+      color: #1e1e1e;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    a.back-btn:hover {
+      background-color: #ffd633;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      section.service {
+        flex-direction: column;
+        text-align: center;
+      }
+      section.service img {
+        max-width: 80%;
+      }
+      section.service .text {
+        margin: 20px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nos Services Détaillés</h1>
+  </header>
+
+  <!-- Service Vidange -->
+  <section class="service" id="vidange">
+    <img src="image/vidange.jpg" alt="Vidange">
+    <div class="text">
+      <h2>Vidange</h2>
+      <p><strong>En quoi consiste le service :</strong> La vidange consiste à remplacer l’huile moteur usagée par une huile neuve adaptée à votre véhicule. Elle garantit la longévité du moteur et un fonctionnement optimal.</p>
+      <p><strong>Comment nous procédons :</strong> Nous venons à votre domicile, vidangeons l’huile usagée, remplaçons le filtre à huile si nécessaire et vérifions le niveau pour que tout soit parfait.</p>
+      <p><strong>Objectif pour le client :</strong> Préserver le moteur, réduire l’usure et assurer un fonctionnement fluide du véhicule.</p>
+    </div>
+  </section>
+
+  <!-- Service Changement de filtres -->
+  <section class="service" id="filtres">
+    <img src="image/changament-filtre.jpg" alt="Changement de filtres">
+    <div class="text">
+      <h2>Changement de filtres</h2>
+      <p><strong>En quoi consiste le service :</strong> Remplacement des filtres à air, carburant et habitacle pour maintenir la performance et la propreté du moteur et de l’habitacle.</p>
+      <p><strong>Comment nous procédons :</strong> Retrait du filtre usagé, installation du filtre neuf et test du véhicule pour garantir le bon fonctionnement.</p>
+      <p><strong>Objectif pour le client :</strong> Assurer une meilleure performance du moteur et un air pur à l’intérieur du véhicule.</p>
+    </div>
+  </section>
+
+  <!-- Service Plaquettes de freins -->
+  <section class="service" id="plaquettes">
+    <img src="image/changement-plaquette.jpg" alt="changement de plaquettes">
+    <div class="text">
+      <h2>Changement de plaquettes de freins</h2>
+      <p><strong>En quoi consiste le service :</strong> Remplacement des plaquettes de freins usées pour garantir votre sécurité et l’efficacité du freinage.</p>
+      <p><strong>Comment nous procédons :</strong> Inspection des freins, retrait des anciennes plaquettes, installation de nouvelles plaquettes et vérification du système.</p>
+      <p><strong>Objectif pour le client :</strong> Sécurité maximale et freinage optimal.</p>
+    </div>
+  </section>
+
+  <!-- Service Réparations électriques -->
+  <section class="service" id="electrique">
+    <img src="image/reparation-electrique" alt="Réparations électriques">
+    <div class="text">
+      <h2>Réparations électriques</h2>
+      <p><strong>En quoi consiste le service :</strong> Diagnostic et réparation des composants électriques : phares, batterie, alternateur, système de démarrage, etc.</p>
+      <p><strong>Comment nous procédons :</strong> Identification du problème, remplacement ou réparation de la pièce défectueuse et test complet du système électrique.</p>
+      <p><strong>Objectif pour le client :</strong> Garantir que tous les composants électriques fonctionnent parfaitement et éviter les pannes.</p>
+    </div>
+  </section>
+
+  <div style="text-align:center;">
+    <a href="index.html" class="back-btn">Retour à l’accueil</a>
+  </div>
+
+  <!-- Script pour animation au scroll -->
+  <script>
+    const services = document.querySelectorAll('.service');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.2});
+
+    services.forEach(service => {
+      observer.observe(service);
+    });
+  </script>
+<div style="text-align:center; margin:40px 0;">
+  <a href="index.html" class="back-btn">← Retour à l’accueil</a>
+</div>
+
+</body>
+</html>
